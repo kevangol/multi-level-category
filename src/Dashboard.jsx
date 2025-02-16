@@ -116,11 +116,14 @@ function Dashboard() {
     }
 
     useEffect(() => {
-        HttpService.get(PROFILE).then(() => {
-        }).catch(() => {
-            navigate("/login", { replace: true })
-        })
-        fetchData()
+        setTimeout(() => {
+
+            HttpService.get(PROFILE).then(() => {
+            }).catch(() => {
+                navigate("/login", { replace: true })
+            })
+            fetchData()
+        }, 1000)
 
     }, [])
 
@@ -137,7 +140,7 @@ function Dashboard() {
                 {loader ? "Loading...." :
                     <div>
                         {
-                            data.filter(i => i.parent === null).map(res =>
+                            data?.filter(i => i.parent === null).map(res =>
                                 <div key={res._id} >
                                     <div>
                                         <small>This Category is {res.isActive ? "Active" : "Not Active"}</small>
