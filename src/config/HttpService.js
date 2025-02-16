@@ -1,11 +1,12 @@
 import axios from "axios";
+const apiPath = import.meta.env.VITE_API_PATH
 
 class HttpService {
     constructor() {
         this.axiosInstance = axios.create({
             withCredentials: true,
-            baseURL: process.env.VITE_API_PATH, // Change to your API URL
-            timeout: 10000, // 10 seconds timeout
+            baseURL: apiPath,
+            timeout: 10000,
             headers: {
                 "Content-Type": "application/json",
             },
