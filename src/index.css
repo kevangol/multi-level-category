@@ -1,0 +1,28 @@
+html,body{
+    background: silver;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="text"],input[type="email"],input[type="password"]{
+    border: none;
+    height: 20px;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 10px;
+} 
+button{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 10px;
+    font-weight: bold;
+    border-radius: "8px";
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}   
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(37, 117, 252, 0.5);
+}
